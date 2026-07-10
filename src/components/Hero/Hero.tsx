@@ -1,0 +1,53 @@
+const primaryButtonStyles =
+  "rounded-full bg-zinc-900 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200";
+
+const secondaryButtonStyles =
+  "rounded-full border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-900 transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-50 dark:hover:bg-zinc-800";
+
+export default function Hero() {
+  return (
+    <section
+      id="hero"
+      className="flex min-h-screen flex-col items-start justify-center gap-6 px-6 sm:px-12 lg:px-24"
+    >
+      <p className="text-lg font-medium text-zinc-500 dark:text-zinc-400">
+        Hi, I&apos;m
+      </p>
+      <h1 className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-6xl">
+        Angel Armas
+      </h1>
+      <h2 className="text-xl font-semibold text-zinc-700 dark:text-zinc-300 sm:text-2xl">
+        Full-Stack Software Engineer
+      </h2>
+      <p className="max-w-xl text-base text-zinc-600 dark:text-zinc-400 sm:text-lg">
+        Full-Stack Software Engineer with a foundation in React, Node.js, and
+        MongoDB. I care about writing readable, well-structured code — and
+        I&apos;m currently deepening that with TypeScript and Next.js.
+      </p>
+      <div className="flex flex-wrap gap-4">
+        <a href="#projects" className={primaryButtonStyles}>
+          View Projects
+        </a>
+        <a
+          href="https://github.com/AA96-se"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={secondaryButtonStyles}
+        >
+          GitHub
+        </a>
+        <a
+          href="https://www.linkedin.com/in/angel-armas-se/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={secondaryButtonStyles}
+        >
+          LinkedIn
+        </a>
+        <a href="#" className={secondaryButtonStyles}>
+          Resume
+        </a>
+      </div>
+    </section>
+  );
+}
