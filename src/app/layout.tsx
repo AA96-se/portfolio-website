@@ -12,10 +12,28 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Angel Armas | Full-Stack Developer",
   description:
     "Portfolio of Angel Armas, a full-stack developer specializing in React, Node.js, and MongoDB.",
+  openGraph: {
+    title: "Angel Armas | Full-Stack Developer",
+    description:
+      "Portfolio of Angel Armas, a full-stack developer specializing in React, Node.js, and MongoDB.",
+    url: siteUrl,
+    siteName: "Angel Armas",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Angel Armas | Full-Stack Developer",
+    description:
+      "Portfolio of Angel Armas, a full-stack developer specializing in React, Node.js, and MongoDB.",
+  },
 };
 
 export default function RootLayout({

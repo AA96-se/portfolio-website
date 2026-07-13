@@ -1,5 +1,5 @@
 const linkStyles =
-  "rounded-full border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-900 transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-50 dark:hover:bg-zinc-800";
+  "rounded-full border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-900 transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-50 dark:hover:bg-zinc-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:focus-visible:outline-zinc-50";
 
 export default function Contact() {
   return (
@@ -18,6 +18,7 @@ export default function Contact() {
           href="https://github.com/AA96-se"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="GitHub (opens in a new tab)"
           className={linkStyles}
         >
           GitHub
@@ -26,6 +27,7 @@ export default function Contact() {
           href="https://www.linkedin.com/in/angel-armas-se/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="LinkedIn (opens in a new tab)"
           className={linkStyles}
         >
           LinkedIn

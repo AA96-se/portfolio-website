@@ -5,7 +5,7 @@ const tagStyles =
   "rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300";
 
 const linkStyles =
-  "rounded-full border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-900 transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-50 dark:hover:bg-zinc-800";
+  "rounded-full border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-900 transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-50 dark:hover:bg-zinc-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:focus-visible:outline-zinc-50";
 
 export default function ProjectCard({ project }: { project: Project }) {
   const { title, description, technologies, repos, liveUrl, thumbnail, video } =
@@ -58,6 +58,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             href={repo.url}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`${title} ${repo.label} repository (opens in a new tab)`}
             className={linkStyles}
           >
             {repo.label}
@@ -68,6 +69,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             href={liveUrl}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`${title} live demo (opens in a new tab)`}
             className={linkStyles}
           >
             Live Demo
