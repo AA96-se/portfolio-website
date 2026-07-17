@@ -13,15 +13,15 @@ const skillGroups = [
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express"],
+    items: ["Node.js", "Express", "GraphQL", "Prisma"],
   },
   {
-    category: "Database",
-    items: ["MongoDB"],
+    category: "Databases",
+    items: ["MongoDB", "PostgreSQL"],
   },
   {
-    category: "Tools",
-    items: ["Git", "GitHub", "Postman", "Vercel"],
+    category: "Tools & Platforms",
+    items: ["Git", "GitHub", "Postman", "Docker", "Vercel", "pnpm"],
   },
 ];
 
