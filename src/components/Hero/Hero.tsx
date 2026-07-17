@@ -47,6 +47,9 @@ export default function Hero() {
         >
           LinkedIn
         </a>
+        <a href="#contact" className={secondaryButtonStyles}>
+          Contact
+        </a>
       </div>
     </section>
   );
