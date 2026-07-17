@@ -10,6 +10,7 @@ export const projects: Project[] = [
     repos: [
       { label: "GitHub", url: "https://github.com/AA96-se/se_project_spots" },
     ],
+    thumbnail: "/images/spots.png",
   },
   {
     id: "wtwr",
@@ -21,5 +22,6 @@ export const projects: Project[] = [
       { label: "Frontend", url: "https://github.com/AA96-se/se_project_react" },
       { label: "Backend", url: "https://github.com/AA96-se/se_project_express" },
     ],
+    thumbnail: "/images/wtwr.png",
   },
 ];

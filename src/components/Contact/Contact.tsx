@@ -15,6 +15,12 @@ export default function Contact() {
       </p>
       <div className="flex flex-wrap gap-4">
         <a
+          href="mailto:angelandresarmas@gmail.com"
+          className={linkStyles}
+        >
+          Email
+        </a>
+        <a
           href="https://github.com/AA96-se"
           target="_blank"
           rel="noopener noreferrer"
