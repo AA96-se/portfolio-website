@@ -1,3 +1,10 @@
+"use client";
+
+import { useState } from "react";
+
+const EMAIL_ADDRESS = "angelandresarmas@gmail.com";
+const mailtoHref = `mailto:${EMAIL_ADDRESS}`;
+
 const focusRingStyles =
   "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-primary";
 
@@ -7,7 +14,23 @@ const secondaryLinkStyles = `rounded-full border border-border bg-surface px-6 p
 
 const secondaryVioletLinkStyles = `rounded-full border border-border bg-surface px-6 py-3 text-sm font-semibold text-text-primary transition-colors hover:bg-accent-secondary hover:border-accent-secondary ${focusRingStyles}`;
 
+const emailLinkStyles = `text-base font-semibold text-text-primary transition-colors hover:text-accent-primary sm:text-lg ${focusRingStyles}`;
+
+const copyButtonStyles = `rounded-md border border-border px-2.5 py-1 font-mono text-xs text-text-secondary transition-colors hover:border-accent-primary hover:text-accent-primary ${focusRingStyles}`;
+
 export default function Contact() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL_ADDRESS);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Clipboard access unavailable — fail silently, rest of Contact stays usable.
+    }
+  };
+
   return (
     <section
       id="contact"
@@ -22,11 +45,26 @@ export default function Contact() {
       <p className="text-base leading-relaxed text-text-secondary">
         Best places to reach me or see more of my work:
       </p>
+      <div className="flex flex-col gap-3">
+        <p className="font-mono text-xs font-semibold uppercase tracking-wide text-text-secondary">
+          Email
+        </p>
+        <div className="flex flex-wrap items-center gap-3">
+          <a href={mailtoHref} className={emailLinkStyles}>
+            {EMAIL_ADDRESS}
+          </a>
+          <button
+            type="button"
+            onClick={handleCopy}
+            aria-label={copied ? "Email address copied" : "Copy email address"}
+            className={copyButtonStyles}
+          >
+            {copied ? "Copied" : "Copy"}
+          </button>
+        </div>
+      </div>
       <div className="flex flex-wrap gap-4">
-        <a
-          href="mailto:angelandresarmas@gmail.com"
-          className={primaryLinkStyles}
-        >
+        <a href={mailtoHref} className={primaryLinkStyles}>
           Email
         </a>
         <a
