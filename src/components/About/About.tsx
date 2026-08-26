@@ -8,16 +8,21 @@ export default function About() {
         About
       </h2>
       <p className="text-base leading-relaxed text-text-secondary sm:text-lg">
-        I&apos;m a full-stack software engineer trained through Triple
-        Ten&apos;s bootcamp program, working primarily in the MERN stack —
-        React, JavaScript, Node.js, Express, and MongoDB. I like building
-        things end to end: designing the data model, wiring up the API, and
-        shaping the interface that sits on top of it.
+        I&apos;m a full-stack software engineer focused on building
+        reliable, user-friendly web applications with React, Next.js,
+        TypeScript, and Node.js.
       </p>
       <p className="text-base leading-relaxed text-text-secondary sm:text-lg">
-        TypeScript, Next.js, and Tailwind CSS are part of my everyday
-        toolkit now, alongside the MERN foundation above — this site itself
-        is built with all three.
+        My experience spans collaborative engineering work in an existing
+        production codebase and independently delivering software for real
+        clients — from requirements and development through deployment and
+        production support.
+      </p>
+      <p className="text-base leading-relaxed text-text-secondary sm:text-lg">
+        I enjoy turning real-world problems into clean, maintainable
+        software, and I&apos;m especially interested in opportunities where
+        I can contribute to a strong engineering team while continuing to
+        grow as an engineer.
       </p>
     </section>
   );

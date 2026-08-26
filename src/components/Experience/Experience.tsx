@@ -9,12 +9,14 @@ type ExperienceEntry = {
 
 const experience: ExperienceEntry[] = [
   {
-    id: "tripleten",
-    role: "Fullstack Software Engineering Bootcamp",
-    organization: "TripleTen",
-    period: "June 2025 – June 2026",
-    description:
-      "Completed an intensive full-stack software engineering program covering the MERN stack — React, JavaScript, Node.js, Express, and MongoDB. Built multiple full-stack projects from scratch, including Spots and WTWR.",
+    id: "freelance",
+    role: "Freelance Software Engineer",
+    organization: "Self-Employed",
+    period: "2026 – Present",
+    bullets: [
+      "Build and deploy production web applications for small-business clients using Next.js, React, TypeScript, and Tailwind CSS.",
+      "Manage deployment, DNS/domain configuration, technical SEO, production troubleshooting, and client requirements from discovery through launch.",
+    ],
   },
   {
     id: "synth-tree",
@@ -27,14 +29,12 @@ const experience: ExperienceEntry[] = [
     ],
   },
   {
-    id: "freelance",
-    role: "Freelance Software Engineer",
-    organization: "Self-Employed",
-    period: "2026 – Present",
-    bullets: [
-      "Build and deploy production web applications for small-business clients using Next.js, React, TypeScript, and Tailwind CSS.",
-      "Manage deployment, DNS/domain configuration, technical SEO, production troubleshooting, and client requirements from discovery through launch.",
-    ],
+    id: "tripleten",
+    role: "Fullstack Software Engineering Bootcamp",
+    organization: "TripleTen",
+    period: "June 2025 – June 2026",
+    description:
+      "Completed an intensive full-stack software engineering program covering the MERN stack — React, JavaScript, Node.js, Express, and MongoDB. Built multiple full-stack projects from scratch, including Spots and WTWR.",
   },
 ];
 
