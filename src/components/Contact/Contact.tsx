@@ -1,5 +1,11 @@
-const linkStyles =
-  "rounded-full border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-900 transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-50 dark:hover:bg-zinc-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:focus-visible:outline-zinc-50";
+const focusRingStyles =
+  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-primary";
+
+const primaryLinkStyles = `rounded-full bg-accent-primary px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-accent-primary/90 ${focusRingStyles}`;
+
+const secondaryLinkStyles = `rounded-full border border-border bg-surface px-6 py-3 text-sm font-semibold text-text-primary transition-colors hover:border-accent-primary hover:text-accent-primary ${focusRingStyles}`;
+
+const secondaryVioletLinkStyles = `rounded-full border border-border bg-surface px-6 py-3 text-sm font-semibold text-text-primary transition-colors hover:bg-accent-secondary hover:border-accent-secondary ${focusRingStyles}`;
 
 export default function Contact() {
   return (
@@ -7,16 +13,19 @@ export default function Contact() {
       id="contact"
       className="mx-auto flex max-w-3xl flex-col items-start gap-6 px-6 py-24 sm:px-12 lg:px-24"
     >
-      <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
-        Contact
-      </h2>
-      <p className="text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+      <div className="flex items-center gap-3">
+        <span aria-hidden="true" className="h-px w-8 bg-accent-primary" />
+        <h2 className="font-display text-3xl font-bold tracking-tight text-text-primary">
+          Contact
+        </h2>
+      </div>
+      <p className="text-base leading-relaxed text-text-secondary">
         Best places to reach me or see more of my work:
       </p>
       <div className="flex flex-wrap gap-4">
         <a
           href="mailto:angelandresarmas@gmail.com"
-          className={linkStyles}
+          className={primaryLinkStyles}
         >
           Email
         </a>
@@ -25,7 +34,7 @@ export default function Contact() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub (opens in a new tab)"
-          className={linkStyles}
+          className={secondaryLinkStyles}
         >
           GitHub
         </a>
@@ -34,7 +43,7 @@ export default function Contact() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn (opens in a new tab)"
-          className={linkStyles}
+          className={secondaryVioletLinkStyles}
         >
           LinkedIn
         </a>
