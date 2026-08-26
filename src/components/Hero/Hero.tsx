@@ -1,9 +1,9 @@
 const focusRingStyles =
-  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:focus-visible:outline-zinc-50";
+  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-primary";
 
-const primaryButtonStyles = `rounded-full bg-zinc-900 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200 ${focusRingStyles}`;
+const primaryButtonStyles = `rounded-full bg-accent-primary px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-accent-primary/90 ${focusRingStyles}`;
 
-const secondaryButtonStyles = `rounded-full border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-900 transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-50 dark:hover:bg-zinc-800 ${focusRingStyles}`;
+const secondaryButtonStyles = `rounded-full border border-border bg-surface px-6 py-3 text-sm font-semibold text-text-primary transition-colors hover:border-accent-primary hover:text-accent-primary ${focusRingStyles}`;
 
 export default function Hero() {
   return (
@@ -11,16 +11,19 @@ export default function Hero() {
       id="hero"
       className="flex min-h-screen flex-col items-start justify-center gap-6 px-6 sm:px-12 lg:px-24"
     >
-      <p className="text-lg font-medium text-zinc-500 dark:text-zinc-400">
-        Hi, I&apos;m
-      </p>
-      <h1 className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-6xl">
+      <div className="flex items-center gap-3">
+        <span aria-hidden="true" className="h-px w-8 bg-accent-primary" />
+        <p className="font-mono text-sm tracking-widest text-text-secondary">
+          Hi, I&apos;m
+        </p>
+      </div>
+      <h1 className="font-display text-4xl font-bold tracking-tight text-text-primary sm:text-6xl">
         Angel Armas
       </h1>
-      <p className="text-xl font-semibold text-zinc-700 dark:text-zinc-300 sm:text-2xl">
+      <p className="font-display text-xl font-semibold text-accent-primary sm:text-2xl">
         Full-Stack Software Engineer
       </p>
-      <p className="max-w-xl text-base text-zinc-600 dark:text-zinc-400 sm:text-lg">
+      <p className="max-w-xl text-base text-text-secondary sm:text-lg">
         Full-Stack Software Engineer building production web applications
         with React, Next.js, TypeScript, and Node.js. Experienced across
         frontend development, APIs, databases, deployment, and real-world
