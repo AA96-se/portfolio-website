@@ -2,18 +2,22 @@ import Image from "next/image";
 import { Project } from "@/types";
 
 const tagStyles =
-  "rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300";
+  "rounded-md border border-border px-2.5 py-1 font-mono text-xs text-text-secondary";
 
-const linkStyles =
-  "rounded-full border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-900 transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-50 dark:hover:bg-zinc-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:focus-visible:outline-zinc-50";
+const focusRingStyles =
+  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-primary";
+
+const primaryLinkStyles = `rounded-full bg-accent-primary px-4 py-2 text-sm font-semibold text-black transition-colors hover:bg-accent-primary/90 ${focusRingStyles}`;
+
+const secondaryLinkStyles = `rounded-full border border-border bg-background px-4 py-2 text-sm font-semibold text-text-primary transition-colors hover:border-accent-primary hover:text-accent-primary ${focusRingStyles}`;
 
 export default function ProjectCard({ project }: { project: Project }) {
   const { title, description, technologies, repos, liveUrl, thumbnail, video } =
     project;
 
   return (
-    <article className="flex flex-col gap-4 rounded-2xl border border-zinc-200 p-6 dark:border-zinc-800">
-      <div className="relative aspect-video overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800">
+    <article className="flex flex-col gap-4 rounded-2xl border border-border bg-surface p-6 transition-colors hover:border-accent-primary">
+      <div className="relative aspect-video overflow-hidden rounded-xl bg-background">
         {video ? (
           <video
             src={video}
@@ -29,17 +33,17 @@ export default function ProjectCard({ project }: { project: Project }) {
           />
         ) : (
           <div className="flex h-full w-full items-center justify-center">
-            <span className="text-lg font-semibold text-zinc-400 dark:text-zinc-600">
+            <span className="text-lg font-semibold text-text-muted">
               {title}
             </span>
           </div>
         )}
       </div>
 
-      <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-50">
+      <h3 className="font-display text-xl font-bold text-text-primary">
         {title}
       </h3>
-      <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+      <p className="text-sm leading-relaxed text-text-secondary">
         {description}
       </p>
 
@@ -59,7 +63,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${title} ${repo.label} repository (opens in a new tab)`}
-            className={linkStyles}
+            className={secondaryLinkStyles}
           >
             {repo.label}
           </a>
@@ -70,7 +74,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${title} live demo (opens in a new tab)`}
-            className={linkStyles}
+            className={primaryLinkStyles}
           >
             Live Demo
           </a>

@@ -44,31 +44,34 @@ export default function Experience() {
       id="experience"
       className="mx-auto flex max-w-3xl flex-col gap-10 px-6 py-24 sm:px-12 lg:px-24"
     >
-      <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
-        Experience
-      </h2>
-      <div className="flex flex-col gap-10">
+      <div className="flex items-center gap-3">
+        <span aria-hidden="true" className="h-px w-8 bg-accent-secondary" />
+        <h2 className="font-display text-3xl font-bold tracking-tight text-text-primary">
+          Experience
+        </h2>
+      </div>
+      <div className="flex flex-col gap-10 divide-y divide-border">
         {experience.map((entry) => (
           <div key={entry.id} className="flex flex-col gap-1">
             <div className="flex flex-wrap items-baseline justify-between gap-2">
-              <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-50">
+              <h3 className="font-display text-lg font-bold text-text-primary">
                 {entry.role}
               </h3>
-              <span className="text-sm font-medium text-zinc-500 dark:text-zinc-400">
+              <span className="font-mono text-sm text-text-secondary">
                 {entry.period}
               </span>
             </div>
-            <p className="text-sm font-semibold text-zinc-600 dark:text-zinc-400">
+            <p className="text-sm font-semibold text-text-secondary">
               {entry.organization}
             </p>
             {entry.bullets ? (
-              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-relaxed text-text-secondary">
                 {entry.bullets.map((bullet) => (
                   <li key={bullet}>{bullet}</li>
                 ))}
               </ul>
             ) : (
-              <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+              <p className="mt-2 text-sm leading-relaxed text-text-secondary">
                 {entry.description}
               </p>
             )}
