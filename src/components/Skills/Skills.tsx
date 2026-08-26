@@ -26,7 +26,7 @@ const skillGroups = [
 ];
 
 const tagStyles =
-  "rounded-full bg-zinc-100 px-3 py-1 text-sm font-medium text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300";
+  "rounded-md border border-border px-3 py-1 font-mono text-sm text-text-secondary";
 
 export default function Skills() {
   return (
@@ -34,13 +34,16 @@ export default function Skills() {
       id="skills"
       className="mx-auto flex max-w-5xl flex-col gap-8 px-6 py-24 sm:px-12 lg:px-24"
     >
-      <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
-        Skills
-      </h2>
+      <div className="flex items-center gap-3">
+        <span aria-hidden="true" className="h-px w-8 bg-accent-primary" />
+        <h2 className="font-display text-3xl font-bold tracking-tight text-text-primary">
+          Skills
+        </h2>
+      </div>
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
         {skillGroups.map((group) => (
           <div key={group.category} className="flex flex-col gap-3">
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+            <h3 className="font-mono text-sm font-semibold uppercase tracking-wide text-text-secondary">
               {group.category}
             </h3>
             <div className="flex flex-wrap gap-2">
