@@ -1,9 +1,9 @@
 const focusRingStyles =
   "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-primary";
 
-const primaryButtonStyles = `rounded-full bg-accent-primary px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-accent-primary/90 ${focusRingStyles}`;
+const primaryLinkStyles = `rounded-full bg-accent-primary px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-accent-primary/90 ${focusRingStyles}`;
 
-const secondaryButtonStyles = `rounded-full border border-border bg-surface px-6 py-3 text-sm font-semibold text-text-primary transition-colors hover:border-accent-primary hover:text-accent-primary ${focusRingStyles}`;
+const secondaryLinkStyles = `rounded-full border border-border bg-surface px-6 py-3 text-sm font-semibold text-text-primary transition-colors hover:border-accent-primary hover:text-accent-primary ${focusRingStyles}`;
 
 export default function Hero() {
   return (
@@ -30,7 +30,7 @@ export default function Hero() {
         client projects.
       </p>
       <div className="flex flex-wrap gap-4">
-        <a href="#projects" className={primaryButtonStyles}>
+        <a href="#projects" className={primaryLinkStyles}>
           View Projects
         </a>
         <a
@@ -38,7 +38,7 @@ export default function Hero() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub (opens in a new tab)"
-          className={secondaryButtonStyles}
+          className={secondaryLinkStyles}
         >
           GitHub
         </a>
@@ -47,11 +47,11 @@ export default function Hero() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn (opens in a new tab)"
-          className={secondaryButtonStyles}
+          className={secondaryLinkStyles}
         >
           LinkedIn
         </a>
-        <a href="#contact" className={secondaryButtonStyles}>
+        <a href="#contact" className={secondaryLinkStyles}>
           Contact
         </a>
       </div>
