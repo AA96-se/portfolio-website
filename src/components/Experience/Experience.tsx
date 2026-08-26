@@ -1,4 +1,13 @@
-const experience = [
+type ExperienceEntry = {
+  id: string;
+  role: string;
+  organization: string;
+  period: string;
+  description?: string;
+  bullets?: string[];
+};
+
+const experience: ExperienceEntry[] = [
   {
     id: "tripleten",
     role: "Fullstack Software Engineering Bootcamp",
@@ -12,8 +21,20 @@ const experience = [
     role: "Software Engineering Extern",
     organization: "Synth-Tree NPO",
     period: "May 2026 – June 2026",
-    description:
-      "Worked as a software engineering extern with Synth-Tree, a nonprofit organization, applying full-stack development skills in a collaborative team setting.",
+    bullets: [
+      "Contributed to an existing full-stack application in a collaborative engineering environment using TypeScript, React, pnpm, Prisma/PostgreSQL, GraphQL/Pothos, and Docker.",
+      "Implemented application features and worked within an established monorepo and development workflow.",
+    ],
+  },
+  {
+    id: "freelance",
+    role: "Freelance Software Engineer",
+    organization: "Self-Employed",
+    period: "2026 – Present",
+    bullets: [
+      "Build and deploy production web applications for small-business clients using Next.js, React, TypeScript, and Tailwind CSS.",
+      "Manage deployment, DNS/domain configuration, technical SEO, production troubleshooting, and client requirements from discovery through launch.",
+    ],
   },
 ];
 
@@ -40,9 +61,17 @@ export default function Experience() {
             <p className="text-sm font-semibold text-zinc-600 dark:text-zinc-400">
               {entry.organization}
             </p>
-            <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-              {entry.description}
-            </p>
+            {entry.bullets ? (
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+                {entry.bullets.map((bullet) => (
+                  <li key={bullet}>{bullet}</li>
+                ))}
+              </ul>
+            ) : (
+              <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+                {entry.description}
+              </p>
+            )}
           </div>
         ))}
       </div>

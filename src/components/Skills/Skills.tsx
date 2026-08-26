@@ -3,9 +3,9 @@ const skillGroups = [
     category: "Frontend",
     items: [
       "React",
-      "JavaScript",
       "TypeScript",
       "Next.js",
+      "JavaScript",
       "HTML",
       "CSS",
       "Tailwind CSS",

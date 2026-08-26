@@ -2,6 +2,16 @@ import { Project } from "@/types";
 
 export const projects: Project[] = [
   {
+    id: "dcooler",
+    title: "D'Cooler Cooling & Heating",
+    description:
+      "Rebuilt and migrated a production website for a South Florida HVAC company, replacing a compromised legacy WordPress installation with a modern Next.js application. Managed responsive development, deployment, DNS migration, technical SEO, production troubleshooting, and ongoing client support.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+    repos: [],
+    liveUrl: "https://dcooler.com",
+    thumbnail: "/images/dcooler_screenshot.png",
+  },
+  {
     id: "spots",
     title: "Spots",
     description:

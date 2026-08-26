@@ -21,9 +21,10 @@ export default function Hero() {
         Full-Stack Software Engineer
       </p>
       <p className="max-w-xl text-base text-zinc-600 dark:text-zinc-400 sm:text-lg">
-        Full-Stack Software Engineer with a foundation in React, Node.js, and
-        MongoDB. I care about writing readable, well-structured code — and
-        I&apos;m currently deepening that with TypeScript and Next.js.
+        Full-Stack Software Engineer building production web applications
+        with React, Next.js, TypeScript, and Node.js. Experienced across
+        frontend development, APIs, databases, deployment, and real-world
+        client projects.
       </p>
       <div className="flex flex-wrap gap-4">
         <a href="#projects" className={primaryButtonStyles}>

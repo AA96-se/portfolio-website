@@ -15,8 +15,9 @@ export default function About() {
         shaping the interface that sits on top of it.
       </p>
       <p className="text-base leading-relaxed text-zinc-600 dark:text-zinc-400 sm:text-lg">
-        Right now I&apos;m expanding into TypeScript, Next.js, and Tailwind
-        CSS — this site is itself part of that process.
+        TypeScript, Next.js, and Tailwind CSS are part of my everyday
+        toolkit now, alongside the MERN foundation above — this site itself
+        is built with all three.
       </p>
     </section>
   );
